@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <a href="portfolio.html" id="home">HOME</a>
+    <center>
+    <h1 style="margin-top: 100px;">CONTACT ME</h1>
+    </center>
+    <div class="info">
+    <form>
+        <label for="username">Name:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="text">Reason:</label><br>
+        <input type="text" id="Reason" name="text" required><br><br>
+        <button type="submit" id="submit" onclick="Harish()">submit</button>
+    </form>
+    </div>
+</body>
+<style>
+    h1{
+        color: bisque;
+    }
+    #home{
+        margin-left:1350px;
+        color: rgb(28, 225, 243);
+        text-decoration: none;
+        
+    }
+
+    body{
+        background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .info{
+        text-align: center;
+        margin-top: 100px;
+        font-size: 30px;
+    }   
+    #Reason{
+        width: 500px;
+        height: 100px;
+    } 
+    #email{
+        width: 300px;
+    }
+    #username{
+        width: 300px;
+    }
+    #submit{
+        margin-top: 15px;
+        margin-left:15px;
+        width: 100px;
+        height: 30px;
+    }
+    #submit:hover{
+        transform:scale(1.3);
+        transform-origin: center;
+    }
+</style>
+</html>
+<script>
+    function Harish(){
+        var name = document.getElementById('username').value
+        var email = document.getElementById('email').value
+        var reason = document.getElementById('Reason').value
+
+        if(name&&email&&reason){
+            alert("YOUR MESSASGE HAS BEEN SENT")
+        }
+        else
+            alert("PLEASE ENTER  ALL THE REQUIREMENTS")
+    }
+</script>
